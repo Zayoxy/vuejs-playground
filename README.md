@@ -1,6 +1,12 @@
-# vue-vite-demo
+# Project
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a playground where I can actually test VueJS + vite and get used to it.
+
+## Generation
+
+```sh
+npm init vue@latest
+```
 
 ## Recommended IDE Setup
 
