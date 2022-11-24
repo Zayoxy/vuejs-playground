@@ -7,7 +7,7 @@ This is a playground where I can actually test VueJS + vite and get used to it.
 I finally understand why VueJS can be used so much differently in so many guides !!!
 
 - [ViteJS](https://vitejs.dev/) can be used or not, it packages the node modules more efficiently than webpack (as i understood)
-- [API Styles](https://vuejs.org/guide/introduction.html#api-styles) can also be chosen, the one I learned was the Options API while, by default in [ViteJS](https://vitejs.dev/) project, we use The Composition one
+- [API Styles](https://vuejs.org/guide/introduction.html#api-styles) can also be chosen, the one I learned was the Options API while, by default in [ViteJS](https://vitejs.dev/) project, we use the [Composition](https://www.youtube.com/watch?v=6HUjDKVn0e0) one 
 
 ## Generation
 
