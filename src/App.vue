@@ -1,8 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-import NavBar from "@/components/NavBar.vue";
-</script>
-
 <template>
   <header>
     <NavBar />
@@ -10,6 +5,19 @@ import NavBar from "@/components/NavBar.vue";
 
   <RouterView />
 </template>
+
+<script>
+import { RouterView } from "vue-router";
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+};
+</script>
 
 <style scoped>
 header {
