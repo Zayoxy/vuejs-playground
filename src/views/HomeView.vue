@@ -1,46 +1,41 @@
-<script setup>
-import { ref } from "vue";
-
-// Composition API (The new one)
-// Data
-
-const counter = ref(0);
-// Methods
-
-function increment() {
-  counter.value++;
-}
-
-// Computed properties
-// Lifecycle hooks
-// --------------------------------------------------
-</script>
-
 <template>
   <h1>Welcome to my website's homepage</h1>
   <h3>Our battle will be legendary!</h3>
 
-  <button @click="increment">Click me! {{ counter }}</button>
+  <p ref="p">My name is {{ name }} and I am {{ age }} years old</p>
+  <button @click="handleClick()">Click on me you dummy !</button>
+
+  <!-- <button @click="increment">Click me! {{ counter }}</button> -->
 </template>
 
-<!--
 <script>
+import { ref } from "vue";
+
 export default {
-  // Option API (The old way to build VueJS apps)
-  data() {
-    return {
-      counter: 0,
+  name: "HomeView",
+  setup() {
+    let name = "Alexandre";
+    let age = 18;
+
+    const p = ref(null);
+    console.log(p); // Will log "Undefined" cuz it hasn't been returned yet
+
+    const handleClick = () => {
+      console.log(p.value.classList); // Works here, cuz when we click the button, the p ref is already set
+      p.value.classList.add("test");
+      p.value.textContent = "Hello froggies :D";
     };
+
+    return { name, age, handleClick, p }; // We have to return the function we want to display cuz they ain't reactive
   },
-  methods: {
-    increment() {
-      this.counter++;
-    },
-  },
-  // --------------------------------------------------
+  // created() {
+  //   console.log("Created");
+  // },
+  // mounted() {
+  //   console.log("Mounted");
+  // },
 };
 </script>
--->
 
 <style scoped>
 button {
